@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <h1>Welcome to the Number Guessing Game!</h1>
+    <form action="{{ url_for('play') }}" method="post">
+        <label for="difficulty">Choose your difficulty:</label>
+        <select name="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button type="submit">Start Game</button>
+    </form>
+</body>
+</html>

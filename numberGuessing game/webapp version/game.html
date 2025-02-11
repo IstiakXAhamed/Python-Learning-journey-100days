@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        .ascii-art {
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    <div class="ascii-art">
+        <pre>{{ logo }}</pre>
+    </div>
+    <form method="post">
+        <label for="guess">Make a guess:</label>
+        <input type="number" name="guess" id="guess" required>
+        <button type="submit">Submit Guess</button>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+        {% if count %}
+            <p>You have {{ count }} attempts remaining.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

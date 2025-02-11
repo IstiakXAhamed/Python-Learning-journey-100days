@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Result</title>
+    <style>
+        pre {
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .result-message {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Result</h1>
+    <div class="result-message">
+        <p>{{ result }}</p>
+    </div>
+    <div class="ascii-art">
+        {% if winner %}
+            <pre>{{ winner }}</pre>
+        {% elif loser %}
+            <pre>{{ loser }}</pre>
+        {% endif %}
+    </div>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+    <a href="{{ url_for('game') }}">Play Again</a>
+</body>
+</html>
